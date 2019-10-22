@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>表格</title>
+</head>
+
+<body>
+    <h2>第一个表格</h2>
+    <table border="1">
+        <tr>
+            <td>1</td>
+            <td>一班</td>
+            <td>小方</td>
+            <td>2019年10月</td>
+        </tr>
+
+        <tr>
+            <td>2</td>
+            <td>一班</td>
+            <td>小范</td>
+            <td colspan="2">2019年10月</td>
+        </tr>
+    </table>
+
+    <h2>表格合并</h2>
+    <table border="4" style="border-collapse: collapse;">
+        <tr>
+            <td>编号</td>
+            <td>班级</td>
+            <td>姓名</td>
+            <td>入学时间</td>
+        </tr>
+
+        <tr>
+            <td>1</td>
+            <td>一班</td>
+            <td>小方</td>
+            <td>2019年10月</td>
+        </tr>
+
+
+        <tr>
+            <td>2</td>
+            <td>一班</td>
+            <td>小范</td>
+            <td>2019年10月</td>
+        </tr>
+    </table>
+    <h2>表格合并列</h2>
+    <table border="1" width="400" style="border-collapse: collapse;">
+        <tr>
+            <td>编号</td>
+            <td>班级</td>
+            <td>姓名</td>
+            <td>入学时间</td>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>一班</td>
+            <td colspan="2">小方 2019年10月</td>
+            
+        </tr>
+
+        <tr>
+            <td>2</td>
+            <td>一班</td>
+            <td>小范</td>
+            <td colspan="2">2019年10月</td>
+        </tr>
+    </table>
+
+    <h2>表格合并行</h2>
+    <table border="1" style="border-collapse: collapse;">
+        <tr>
+            <td>编号</td>
+            <td>班级</td>
+            <td>姓名</td>
+            <td>入学时间</td>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td rowspan="2">一班</td>
+            <td>小方 2019年10月</td>
+            <td>2019年10月</td>
+        </tr>
+        <tr>
+            <td>2</td>
+            <td>小范</td>
+            <td colspan="2">2019年10月</td>
+        </tr>
+    </table>
+</body>
+
+</html>
