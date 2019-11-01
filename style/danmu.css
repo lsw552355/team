@@ -34,7 +34,7 @@
 }
 #input{
     text-align: center;
-   background-color: tomato;
+    color: green;
 }
 
 @keyframes move {
