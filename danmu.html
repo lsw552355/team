@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>弹幕发送</title>
+    <link rel="stylesheet" href="style\danmu.css">
+</head>
+
+<body>
+    <div id="box">
+        <div id="main"></div>
+        <div id="footer">
+            <div class="f-input">
+                <input id="input" type="text" placeholder=" 请输入弹幕！">
+            </div>
+            <div class="f-buttom">
+                <button id="bt1" onclick="biu()">发射</button>
+                <button id="bt2">清屏</button>
+            </div>
+        </div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    <script>
+        let main = document.getElementById("main")
+        let input = document.getElementById("input")
+        let bt1 = document.getElementById("bt1")
+        let bt2 = document.getElementById("bt2")
+
+        // 发送
+        function biu() {
+            console.log("biu")
+            let output = input.value
+            if (output == '') {
+                alert('请输入弹窗内容！')
+            } else {
+                // 随机颜色
+                let c1 = Math.floor(Math.random() * 300)
+                let c2 = Math.floor(Math.random() * 300)
+                let c3 = Math.floor(Math.random() * 300)
+                let color = `c1c2c3(${c1},${c2},${c3})`;
+                console.log(color)
+                // 随机距离
+                let t = Math.floor(Math.random() * 400)
+                console.log(t)
+
+                // 随机字体大小
+                let f = Math.floor(Math.random() * 60)
+                console.log("字体大小" + f)
+                console.log(output)
+                // 插入
+                let p = document.createElement('p')
+                p.innerText = output
+                p.style.position = "absolute"
+                p.style.right = 0
+                p.style.top = t + "px"
+                p.style.fontSize = f + "px"
+                p.style.color = "c1c2c3" + "(" + c1 + "," + c2 + "," + c3 + ")"
+                console.log(t + "px")
+                main.append(p)
+
+            }
+        }
+        //键盘
+        $("#input").keydown(function (e) {
+            if (e.keyCode == 13) {
+                biu()
+            }
+        })
+        // 清屏
+        $("#bt2").click(function () {
+            $("p").empty()
+        })
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,64 @@
+#container {
+    position: relative;
+    
+}
+
+#main {
+    position: relative;
+    border: 1px solid slateblue;
+    height: 550px;
+    background-color: whitesmoke;
+    overflow:hidden; /*超出隐藏*/
+    white-space: nowrap;/*超出不换行*/
+}
+
+#footer {
+    text-align: center;
+}
+#footer button {
+    border: px solid rgba(red, green, blue, alpha);
+    width: 80px;
+    height: 30px;
+    font-size: 16px;
+    background-color:wheat;
+}
+
+#footer .f-input {
+    height: 100px;
+    line-height: 100px;
+}
+
+#footer .f-input input {
+    height: 30px;
+    width: 450px;
+}
+#input{
+    text-align: center;
+   background-color: tomato;
+}
+
+@keyframes move {
+    0% {
+        right:0;color:red;
+    }
+    25% {
+        right:25%;color:green;
+    }
+    50% {
+        right:50%;color:blue;
+    }
+    75%{
+        right:75%;color :yellow;
+    }
+    90% {
+        right: 90%;color:blueviolet;
+    }
+    100%{
+        right: 120%;color: cyan;
+    }
+}
+
+p {
+    animation: move 2s linear forwards;
+    position:relative;
+}
